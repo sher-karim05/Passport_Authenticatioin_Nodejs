@@ -1,0 +1,28 @@
+<% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error){ %>
+   <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <%- error.msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+   </button> 
+</div>
+<% } %>
+
+<!-- Success Message -->
+<% if(success_msg) %>
+   <div class="alert alert_success alert-dismissible fade show" role="alert">
+       <button type="button" class="close" data-dismiss="alert" area-label="Close">
+           <span aria-hidden="true">&times;</span>
+           <%= success_msg %>
+        </button> 
+   </div>
+
+<!-- Error Message -->
+<% if(error_msg) %>
+   <div class="alert alert_success alert-dismissible fade show" role="alert">
+       <button type="button" class="close" data-dismiss="alert" area-label="Close">
+           <span aria-hidden="true">&times;</span>
+        </button> 
+        <%= error_msg %>
+   </div>
+
+<% } %>
